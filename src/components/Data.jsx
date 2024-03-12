@@ -7,12 +7,14 @@ import { categories } from "../api/categories";
 const Data = () => {
   const [info, setInfo] = useState();
   const [city, setCity] = useState("");
+  const [show, setHide] = useState(false);
   const [country, setCountry] = useState("");
   const [category, setCategory] = useState("");
   const [language, setLanguage] = useState("");
 
   const search = async (event) => {
     event.preventDefault();
+    setHide(true);
     const results = await handleSearch(country, city, category, language);
     setInfo(results);
   };
@@ -85,7 +87,12 @@ const Data = () => {
           </div>
         </>
       ) : (
-        <div className="animation w-32 h-32 lg:w-42 lg:h-42 mx-auto mt-32 rounded-full border-4 border-transparent border-b-sky-600 border-r-sky-600"></div>
+        <div
+          style={{
+            display: `${show ? "block" : "none"}`,
+          }}
+          className="animation w-32 h-32 lg:w-42 lg:h-42 mx-auto mt-32 rounded-full border-4 border-transparent border-b-sky-600 border-r-sky-600"
+        ></div>
       )}
     </div>
   );

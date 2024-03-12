@@ -5,7 +5,7 @@
 }
 
 .animation {
-  animation: loop 1s linear 2s infinite forwards;
+  animation: loop 1s linear infinite forwards;
 }
 
 @keyframes loop {
