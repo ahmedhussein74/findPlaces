@@ -3,3 +3,13 @@
   align-items: center;
   justify-content: center;
 }
+
+.animation {
+  animation: loop 1s linear 2s infinite forwards;
+}
+
+@keyframes loop {
+  to {
+    transform: rotate(360deg);
+  }
+}
