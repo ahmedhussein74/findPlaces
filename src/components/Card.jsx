@@ -40,7 +40,7 @@ const Card = ({ country }) => {
             target="_blank"
             className="text-blue-600 underline"
           >
-            {country.website}
+            Website
           </a>
         </div>
       ) : null}

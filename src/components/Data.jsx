@@ -73,6 +73,12 @@ const Data = () => {
           <option value="en">English</option>
           <option value="ar">اللغة العربية</option>
         </select>
+        <input
+          type="text"
+          placeholder="Enter your category"
+          onChange={(e) => setCategory(e.target.value)}
+          className="h-12 border rounded-lg outline-none pl-2"
+        />
         <button className="h-12 bg-sky-600 text-white p-2 rounded-lg">
           Search
         </button>
